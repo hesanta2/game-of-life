@@ -1,0 +1,65 @@
+.container {
+  $icon-size: 25px;
+  display: inline-block;
+  background-color: #202020;
+  box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.86);
+  div {
+    display: inline-block;
+    cursor: pointer;
+    top: 0px;
+    transition: all 0.15s ease-in-out;
+  }
+  div:hover {
+    background-color: #272727;
+  }
+  div:active {
+    transition: none;
+    position: relative;
+    top: 1px;
+  }
+  a {
+    display: inline-block;
+    width: $icon-size;
+    height: $icon-size;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    margin: 5px;
+    vertical-align: middle;
+  }
+
+  $offset: 15px;
+  $factor: $icon-size / 15px;
+  .play {
+    background-image: url("../../../assets/menu-icons.svg");
+    background-position: 0px;
+  }
+  .pause {
+    background-image: url("../../../assets/menu-icons.svg");
+    background-position: -$offset * $factor;
+  }
+  .refresh {
+    background-image: url("../../../assets/menu-icons.svg");
+    background-position: -$offset * 2 * $factor;
+  }
+  .more {
+    background-image: url("../../../assets/menu-icons.svg");
+    background-position: -$offset * 3 * $factor;
+  }
+
+  .caret {
+    display: block;
+    margin: 0px;
+    border-top: 1px solid #303030;
+    a {
+      display: block;
+      height: 4px;
+      background-image: url("../../../assets/caret.svg");
+      margin: 2px auto 2px auto;
+      width: 100%;
+    }
+    a.closed {
+      transform: scaleY(-1);
+    }
+  }
+}

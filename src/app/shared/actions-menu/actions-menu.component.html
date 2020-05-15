@@ -1,0 +1,14 @@
+<div class="container">
+  <div>
+    <a class="icon" [ngClass]="{'play': !play, 'pause': play}"></a>
+  </div>
+  <div>
+    <a class="refresh"></a>
+  </div>
+  <div>
+    <a class="more"></a>
+  </div>
+  <div class="caret" (click)="open = !open">
+    <a [ngClass]="{'closed': !open}"></a>
+  </div>
+</div>

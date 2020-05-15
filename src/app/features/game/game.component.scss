@@ -1,3 +1,17 @@
-canvas {
-  display: block;
+.container {
+  text-align: center;
+  canvas {
+    display: block;
+  }
+
+  .menu-close {
+    top: -3.65%;
+    opacity: 0.75;
+  }
+  actions-menu {
+    position: absolute;
+    transform: translate(-50%);
+    transition: all 0.25s ease-in-out;
+    top: 0px;
+  }
 }
