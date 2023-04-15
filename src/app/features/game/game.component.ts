@@ -1,9 +1,9 @@
-import { Component, OnInit, ViewChild, ElementRef, HostListener } from '@angular/core';
-import { RenderService } from 'src/app/shared/services/render.service';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { ActionsMenuComponent } from 'src/app/shared/actions-menu/actions-menu.component';
 import { Board } from 'src/app/shared/models/board.model';
 import { Cell } from 'src/app/shared/models/cell.modell';
 import { LoggerService } from 'src/app/shared/services/logger.service';
-import { ActionsMenuComponent } from 'src/app/shared/actions-menu/actions-menu.component';
+import { RenderService } from 'src/app/shared/services/render.service';
 
 @Component({
   selector: 'app-game',
@@ -21,7 +21,7 @@ export class GameComponent implements OnInit {
   private _running: boolean = true;
   private set running(value: boolean) {
     this._running = value;
-    this.menu.play = value;
+    this.menu.isPlaying = value;
   }
   private get running(): boolean {
     return this._running;
@@ -35,10 +35,13 @@ export class GameComponent implements OnInit {
 
   ngOnInit() {
     this.init();
+    this.menu.onPlay.subscribe(() => this.running = true);
+    this.menu.onPause.subscribe(() => this.running = false);
+    this.menu.onReset.subscribe(() => this.init());
   }
 
   private init() {
-    this.board = new Board(this.logger, window.innerWidth, window.innerHeight, this.verticalCellsNumber/*, undefined, 25*/);
+    this.board = new Board(this.logger, window.innerWidth, window.innerHeight, this.verticalCellsNumber);
     this.renderService.init(this.canvas, this.board);
 
     this.resizeToWindow();
@@ -64,18 +67,17 @@ export class GameComponent implements OnInit {
     this.renderService.drawCells();
   }
 
-  public onGameClick(event: MouseEvent): void {
+  public onMouseDown(event: MouseEvent): void {
     const leftClick = event.buttons == 1;
     const middleClick = event.buttons == 4;
 
-    if (!leftClick && !middleClick) {
-      this.running = true;
-      return;
-    }
-
-    if (this.timer) {
+    if (leftClick || middleClick) {
       this.running = false;
     }
+
+    /*if (this.timer) {
+      this.running = false;
+    }*/
 
     let cell: Cell = this.board.getCellByPoint(event.clientX, event.clientY);
     if (cell) {
@@ -92,8 +94,16 @@ export class GameComponent implements OnInit {
     }
   }
 
+  public onMouseMove(event: MouseEvent): void {
+
+  }
+
+  public onMouseUp(event: MouseEvent): void {
+    this.running = true;
+  }
+
   @HostListener('window:resize', ['$event'])
-  onResize(event) {
+  public onResize(_): void {
     this.resizeToWindow();
   }
 

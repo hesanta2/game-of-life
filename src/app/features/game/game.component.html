@@ -1,5 +1,4 @@
 <div class="container">
   <actions-menu #menu [ngClass]="{'menu-close': !menu.open}"></actions-menu>
-  <canvas #canvas width="600" height="300" (mousemove)="onGameClick($event)" (mousedown)="onGameClick($event)"
-    (mouseup)="onGameClick($event)"></canvas>
+  <canvas #canvas width="600" height="300" (mousemove)="onMouseDown($event)" (mousedown)="onMouseDown($event)" (mouseup)="onMouseUp($event)"></canvas>
 </div>

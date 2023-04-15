@@ -1,12 +1,9 @@
 <div class="container">
   <div>
-    <a class="icon" [ngClass]="{'play': !play, 'pause': play}"></a>
+    <a class="icon" [ngClass]="{'play': !isPlaying, 'pause': isPlaying}" (click)="play()"></a>
   </div>
   <div>
-    <a class="refresh"></a>
-  </div>
-  <div>
-    <a class="more"></a>
+    <a class="refresh" (click)="reset()"></a>
   </div>
   <div class="caret" (click)="open = !open">
     <a [ngClass]="{'closed': !open}"></a>
