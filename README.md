@@ -1,27 +1,33 @@
-# GameOfLife
+# Game of Life in Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+This project implements Conway's Game of Life using Angular. The Game of Life is a cellular automaton devised by the British mathematician John Horton Conway in 1970. The game consists of a two-dimensional grid of cells, where each cell can be either alive or dead. The state of each cell in the grid is determined by its eight neighboring cells, according to a set of simple rules.
 
-## Development server
+## Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+You can see a live demo of this implementation of the Game of Life [here](https://hesanta2.github.io/game-of-life)).
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To install this project locally, clone this repository and run `npm install` in the project directory.
 
-## Build
+## Usage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+To run the project locally, use the command `ng serve` in the project directory. Navigate to `http://localhost:4200/` to view the app in your browser.
 
-## Running unit tests
+## Development
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0. To learn more about Angular and the CLI, visit the [official documentation](https://angular.io/).
 
-## Running end-to-end tests
+## Contributing
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Contributions to this project are welcome. To contribute, please follow these steps:
 
-## Further help
+1. Fork this repository
+2. Create a new branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new pull request
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
