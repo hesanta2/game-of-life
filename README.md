@@ -1,27 +1,29 @@
-# GameOfLife
+# Game of Life in Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+This project implements Conway's Game of Life using Angular. The Game of Life is a cellular automaton devised by the British mathematician John Horton Conway in 1970. The game consists of a two-dimensional grid of cells, where each cell can be either alive or dead. The state of each cell in the grid is determined by its eight neighboring cells, according to a set of simple rules.
 
-## Development server
+## Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+You can see a live demo of this implementation of the Game of Life [here](https://hesanta2.github.io/game-of-life).
 
-## Code scaffolding
+* Use the play/pause button to control the animation of the game
+* Use the restart button to reset the game to its initial state
+* Draw on the cells with the left mouse button
+* Erase with the middle mouse button
+* Pause the game by pressing the spacebar
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
 
-## Build
+To install this project locally, clone this repository and run `npm install` in the project directory.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Usage
 
-## Running unit tests
+To run the project locally, use the command `ng serve` in the project directory. Navigate to `http://localhost:4200/` to view the app in your browser.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Development
 
-## Running end-to-end tests
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7. To learn more about Angular and the CLI, visit the [official documentation](https://angular.io/).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## License
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
