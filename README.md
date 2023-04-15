@@ -22,7 +22,7 @@ To run the project locally, use the command `ng serve` in the project directory.
 
 ## Development
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0. To learn more about Angular and the CLI, visit the [official documentation](https://angular.io/).
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7. To learn more about Angular and the CLI, visit the [official documentation](https://angular.io/).
 
 ## License
 
