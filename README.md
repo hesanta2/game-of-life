@@ -4,7 +4,7 @@ This project implements Conway's Game of Life using Angular. The Game of Life is
 
 ## Demo
 
-You can see a live demo of this implementation of the Game of Life [here](https://hesanta2.github.io/game-of-life).
+You can see a live demo of this implementation of the Game of Life <a href="https://hesanta2.github.io/game-of-life" target="_blank">.
 
 * Use the play/pause button to control the animation of the game
 * Use the restart button to reset the game to its initial state
