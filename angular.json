@@ -121,6 +121,9 @@
               "devServerTarget": "game-of-life:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }},
