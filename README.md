@@ -6,11 +6,11 @@ This project implements Conway's Game of Life using Angular. The Game of Life is
 
 You can see a live demo of this implementation of the Game of Life [here](https://hesanta2.github.io/game-of-life)).
 
-- Use the play/pause button to control the animation of the game
-- Use the restart button to reset the game to its initial state
-- Draw on the cells with the left mouse button
-- Erase with the middle mouse button
-- Pause the game by pressing the spacebar
+* Use the play/pause button to control the animation of the game
+* Use the restart button to reset the game to its initial state
+* Draw on the cells with the left mouse button
+* Erase with the middle mouse button
+* Pause the game by pressing the spacebar
 
 ## Installation
 
@@ -23,16 +23,6 @@ To run the project locally, use the command `ng serve` in the project directory.
 ## Development
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0. To learn more about Angular and the CLI, visit the [official documentation](https://angular.io/).
-
-## Contributing
-
-Contributions to this project are welcome. To contribute, please follow these steps:
-
-1. Fork this repository
-2. Create a new branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new pull request
 
 ## License
 
