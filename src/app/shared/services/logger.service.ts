@@ -9,7 +9,7 @@ export class LoggerService {
   constructor() { }
 
   public log(message: any): void {
-    if (!environment.production) {
+    if (!environment.logger) {
       console.log(message);
     }
   }
